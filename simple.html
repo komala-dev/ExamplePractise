@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=500px, initial-scale=1.0">
+    <title>jqueryExample</title>
+</head>
+<body>
+    <h2>Welcome to jQuery Example</h2>
+    <p id="text">This is a simple paragraph.</p>
+
+    <button id="changeColor">Change Color</button>
+    <button id="hideText">Hide Text</button>
+    <button id="showText">Show Text</button>
+    <button id="changeText">Change Text</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            // Change text color when button is clicked
+            $("#changeColor").click(function(){
+                $("#text").css("color", "red");
+            });
+
+            // Hide paragraph
+            $("#hideText").click(function(){
+                $("#text").hide();
+            });
+
+            // Show paragraph
+            $("#showText").click(function(){
+                $("#text").show();
+            });
+
+            // Change text content
+            $("#changeText").click(function(){
+                $("#text").text("This text has been changed using jQuery!");
+            });
+
+        });
+    </script>
+</body>
+</html>
